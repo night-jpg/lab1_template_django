@@ -1,0 +1,11 @@
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+###
+pip install -r requirements.txt
+###
+python3 manage.py makemigrations orm
+###
+python3 manage.py sqlmigrate orm 0001
+###
+python3 manage.py migrate
